@@ -209,7 +209,7 @@ const UpdateProject = () => {
                 </h2>
               </div>
               <div className="h-auto w-full">
-                <select className="select select-neutral
+                <select className="select select-neutral bg-zinc-900
                 w-full rounded text-activeColor font-text font-medium"
                 name="project_status"
                 value={projectStatusValue}

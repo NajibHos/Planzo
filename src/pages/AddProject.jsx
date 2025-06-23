@@ -166,7 +166,7 @@ const AddProject = () => {
               </div>
               <div className="h-auto w-full">
                 <select defaultValue="Pick an option" className="select select-neutral
-                w-full rounded text-activeColor font-text font-medium"
+                w-full rounded text-activeColor font-text font-medium bg-zinc-900"
                 name="project_status" required>
                   <option disabled={true}>Pick an option</option>
                   {
