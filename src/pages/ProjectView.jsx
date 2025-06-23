@@ -46,14 +46,6 @@ const ProjectView = () => {
             </h2>
           </div>
           <div className="h-auto w-full text-center">
-            <h2 className="text-base font-text font-medium text-zinc-200">
-              Deadline:
-              <span className="text-red-600 ml-2">
-                {data.deadline || 'Fetching..'}
-              </span>
-            </h2>
-          </div>
-          <div className="h-auto w-full text-center">
             <button className="text-base font-text font-medium text-zinc-200
             bg-transparent underline cursor-pointer"
             onClick={() => navigate('/projects')}>
@@ -63,6 +55,13 @@ const ProjectView = () => {
         </div>
         {/* larger screen */}
         <div className="h-auto w-full hidden lg:block">
+          <div className="h-auto w-full text-left mb-2">
+            <h2 className="text-lg font-text font-medium text-zinc-200">
+              Deadline: <span className="text-red-600">
+                {data.deadline || 'fetching..'}
+                </span>
+            </h2>
+          </div>
           <div className="h-[80px] w-full rounded bg-stone-900 mb-5
           flex justify-between items-center">
             <div className="h-auto w-[15%] text-center border-r
@@ -110,25 +109,25 @@ const ProjectView = () => {
             <div className="h-auto w-[15%] text-center border-r
             border-r-zinc-400">
               <h2 className="text-lg text-activeColor font-text font-medium truncate">
-                {data.client_name}
+                {data.client_name || 'Null'}
               </h2>
             </div>
             <div className="h-auto w-[15%] text-center border-r
             border-r-zinc-400">
               <h2 className="text-lg text-activeColor font-text font-medium truncate">
-                {`0${data.contact_info}`}
+                {`0${data.contact_info || '00000000000'}`}
               </h2>
             </div>
             <div className="h-auto w-[15%] text-center border-r
             border-r-zinc-400">
               <h2 className="text-lg text-activeColor font-text font-medium truncate">
-                {`${data.advance_pay} BDT`}
+                {`${data.advance_pay || '0000'} BDT`}
               </h2>
             </div>
             <div className="h-auto w-[15%] text-center border-r
             border-r-zinc-400">
               <h2 className="text-lg text-activeColor font-text font-medium truncate">
-                {`${data.due_pay} BDT`}
+                {`${data.due_pay || '0000'} BDT`}
               </h2>
             </div>
             <div className="h-auto w-[15%] text-center border-r
@@ -136,7 +135,7 @@ const ProjectView = () => {
               <h2 className={`text-lg text-activeColor font-text font-medium truncate
                 ${data.project_status === 'Completed' && '!text-green-600'}
                 ${data.project_status === 'Cancelled' && '!text-red-600'} `}>
-                {data.project_status}
+                {data.project_status || 'Null'}
               </h2>
             </div>
             <div className="h-auto w-[15%] text-center">
@@ -182,6 +181,11 @@ const ProjectView = () => {
               </div>
               <div className="h-auto w-full text-center">
                 <h2 className="text-base text-zinc-200 font-text font-medium">
+                  Deadline
+                </h2>
+              </div>
+              <div className="h-auto w-full text-center">
+                <h2 className="text-base text-zinc-200 font-text font-medium">
                   Action
                 </h2>
               </div>
@@ -189,34 +193,39 @@ const ProjectView = () => {
             {
               loading && <DataViewSkeleton />
             }
-            <div className={`${!loading ? 'block' : 'hidden'} h-auto w-full`}>
-              <div className="h-auto w-[50%] flex flex-col justify-center
+            <div className={`${!loading ? 'block' : 'hidden'} h-auto w-[50%]`}>
+              <div className="h-auto w-full flex flex-col justify-center
             items-center gap-6">
               <div className="h-auto w-full text-center">
                 <h2 className="text-base text-activeColor font-text font-medium">
-                  {data.client_name}
+                  {data.client_name || 'Null'}
                 </h2>
               </div>
               <div className="h-auto w-full text-center">
                 <h2 className="text-base text-activeColor font-text font-medium">
-                  {`0${data.contact_info}`}
+                  {`0${data.contact_info || '00000000000'}`}
                 </h2>
               </div>
               <div className="h-auto w-full text-center">
                 <h2 className="text-base text-activeColor font-text font-medium">
-                  {`${data.advance_pay} BDT`}
+                  {`${data.advance_pay || '0000'} BDT`}
                 </h2>
               </div>
               <div className="h-auto w-full text-center">
                 <h2 className="text-base text-activeColor font-text font-medium">
-                  {`${data.due_pay} BDT`}
+                  {`${data.due_pay || '0000'} BDT`}
                 </h2>
               </div>
               <div className="h-auto w-full text-center">
+                <h2 className="text-base text-red-600 font-text font-medium">
+                  {data.deadline || 'Null'}
+                </h2>
+              </div>
+              <div className="h-auto w-full !text-center">
                 <h2 className={`text-base text-activeColor font-text font-medium
                  ${data.project_status === 'Completed' && '!text-green-600'}
                  ${data.project_status === 'Cancelled' && '!text-red-600'} `}>
-                  {data.project_status}
+                  {data.project_status || 'Null'}
                 </h2>
               </div>
               <div className="h-auto w-full text-center">

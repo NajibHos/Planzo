@@ -105,19 +105,19 @@ const TransactionView = () => {
             <div className="h-auto w-[15%] text-center border-r
             border-r-zinc-400">
               <h2 className="text-lg text-activeColor font-text font-medium">
-                {data.client_name}
+                {data.client_name || 'Null'}
               </h2>
             </div>
             <div className="h-auto w-[15%] text-center border-r
             border-r-zinc-400">
               <h2 className="text-lg text-activeColor font-text font-medium">
-                {`0${data.contact_info}`}
+                {`0${data.contact_info || '0000000000'}`}
               </h2>
             </div>
             <div className="h-auto w-[15%] text-center border-r
             border-r-zinc-400">
               <h2 className="text-lg text-green-600 font-text font-medium">
-                {`${data.amount || 0} BDT`}
+                {`${data.amount || '0000'} BDT`}
               </h2>
             </div>
             <div className="h-auto w-[15%] text-center border-r
@@ -130,7 +130,7 @@ const TransactionView = () => {
             border-r-zinc-400">
               <h2 className={`text-lg text-red-600 font-text font-medium
                 ${data.due_pay === 0 && '!text-activeColor'}  `}>
-                {`${data.due_pay || 0} BDT`}
+                {`${data.due_pay || '0000'} BDT`}
               </h2>
             </div>
             <div className="h-auto w-[15%] text-center">
@@ -183,33 +183,33 @@ const TransactionView = () => {
             {
               loading && (<DataViewSkeleton />)
             }
-            <div className={`${!loading ? 'block' : 'hidden'} h-auto w-full`}>
-              <div className="h-auto w-[50%] flex flex-col justify-center
+            <div className={`${!loading ? 'block' : 'hidden'} h-auto w-[50%]`}>
+              <div className="h-auto w-full flex flex-col justify-center
             items-center gap-6">
               <div className="h-auto w-full text-center">
                 <h2 className="text-base text-activeColor font-text font-medium">
-                  {data.client_name}
+                  {data.client_name || ''}
                 </h2>
               </div>
               <div className="h-auto w-full text-center">
                 <h2 className="text-base text-activeColor font-text font-medium">
-                  {`0${data.contact_info}`}
+                  {`0${data.contact_info || '00000000000'}`}
                 </h2>
               </div>
               <div className="h-auto w-full text-center">
                 <h2 className="text-base text-activeColor font-text font-medium">
-                  {`${data.amount || 0} BDT`}
+                  {`${data.amount || '0000'} BDT`}
                 </h2>
               </div>
               <div className="h-auto w-full text-center">
                 <h2 className="text-base text-activeColor font-text font-medium">
-                  {data.date}
+                  {data.date || 'Null'}
                 </h2>
               </div>
               <div className="h-auto w-full text-center">
                 <h2 className={`text-base text-activeColor font-text font-medium
                   ${data.due_pay === 0 && '!text-activeColor'}  `}>
-                  {`${data.due_pay || 0} BDT`}
+                  {`${data.due_pay || '0000'} BDT`}
                 </h2>
               </div>
               <div className="h-auto w-full text-center">
