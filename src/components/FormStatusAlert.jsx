@@ -30,7 +30,7 @@ const FormStatusAlert = ({ status, type }) => {
           <h2 className="text-lg font-text font-medium
           text-zinc-200">
             {
-              type === 'Update' && `{${type}!} Unsuccessful!`
+              type === 'Update' && `${type} Unsuccessful!`
             }
             {
               type !== 'Update' && `Failed to add ${type}!`
