@@ -164,7 +164,7 @@ const UpdateClient = () => {
                  name="client_name"
                  value={clientName}
                  onChange={(ev) => setClientName(ev.target.value)}
-                 className="input
+                 className="input bg-zinc-900
                  input-neutral w-full rounded text-activeColor font-text font-medium" />
               </div>
             </div>
@@ -180,7 +180,7 @@ const UpdateClient = () => {
                  name="contact_info"
                  value={contactInfo}
                  onChange={(ev) => setContactInfo(ev.target.value)}
-                 className="input
+                 className="input bg-zinc-900
                  input-neutral w-full rounded text-activeColor font-text font-medium" />
               </div>
             </div>
@@ -192,7 +192,7 @@ const UpdateClient = () => {
                 </h2>
               </div>
               <div className="h-auto w-full">
-                <select  className="select select-neutral
+                <select  className="select select-neutral bg-zinc-900
                 w-full rounded text-activeColor font-text font-medium"
                 name="client_status"
                 value={clientStatusValue}
@@ -214,7 +214,7 @@ const UpdateClient = () => {
                 </h2>
               </div>
               <div className="h-auto w-full">
-                <select className="select select-neutral
+                <select className="select select-neutral bg-zinc-900
                 w-full rounded text-activeColor font-text font-medium"
                 name="project_status"
                 value={projectStatusValue}
@@ -236,7 +236,7 @@ const UpdateClient = () => {
                 </h2>
               </div>
               <div className="h-auto w-full">
-                <select className="select select-neutral
+                <select className="select select-neutral bg-zinc-900
                 w-full rounded text-activeColor font-text font-medium"
                 name="client_source"
                 value={clientSourceValue}

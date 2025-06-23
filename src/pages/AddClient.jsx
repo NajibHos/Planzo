@@ -128,7 +128,7 @@ const AddClient = () => {
               <div className="h-auto w-full">
                 <input type="text" placeholder="Type here" name="client_name"
                  required
-                 className="input
+                 className="input bg-zinc-900
                  input-neutral w-full rounded text-activeColor font-text font-medium" />
               </div>
             </div>
@@ -142,7 +142,7 @@ const AddClient = () => {
               <div className="h-auto w-full">
                 <input type="number" placeholder="Type Here" name="contact_info"
                  required
-                 className="input
+                 className="input bg-zinc-900
                  input-neutral w-full rounded text-activeColor font-text font-medium" />
               </div>
             </div>
@@ -155,7 +155,7 @@ const AddClient = () => {
               </div>
               <div className="h-auto w-full">
                 <select defaultValue="Pick an option" className="select select-neutral
-                w-full rounded text-activeColor font-text font-medium"
+                w-full rounded text-activeColor font-text font-medium bg-zinc-900"
                 name="client_status">
                   <option disabled={true}>Pick an option</option>
                   {
@@ -175,7 +175,7 @@ const AddClient = () => {
               </div>
               <div className="h-auto w-full">
                 <select defaultValue="Pick an option" className="select select-neutral
-                w-full rounded text-activeColor font-text font-medium"
+                w-full rounded text-activeColor font-text font-medium bg-zinc-900"
                 name="project_status">
                   <option disabled={true}>Pick an option</option>
                   {
@@ -195,7 +195,7 @@ const AddClient = () => {
               </div>
               <div className="h-auto w-full">
                 <select defaultValue="Pick an option" className="select select-neutral
-                w-full rounded text-activeColor font-text font-medium"
+                w-full rounded text-activeColor font-text font-medium bg-zinc-900"
                 name="client_source">
                   <option disabled={true}>Pick an option</option>
                   {
