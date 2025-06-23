@@ -143,7 +143,7 @@ const ClientsList = () => {
         </div>
         <div className={`h-auto w-auto
           ${dataLength > cardsPerPage ? 'block' : 'hidden'}`}>
-          <div className="join grid grid-cols-2">
+          <div className="h-auto w-auto join grid grid-cols-2">
             <button className="join-item btn btn-outline text-activeColor
             hover:text-white font-text font-medium"
             disabled={page === 1}
