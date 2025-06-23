@@ -20,14 +20,32 @@ It reflects my journey from learning to code to building real tools that support
 - **Front-end:** React, Tailwind CSS, Daisy UI, Lucide React
 - **Back-end:** Appwrite(authentication and database)
 
+## 💡 Future Plans
+
+This is a personal-use app, but I may improve or open-source it further.
+Feel free to suggest features or ideas in the issues tab or message me directly!
+
+## 📄 License
+
+This project is for personal use. Not licensed for redistribution or commercial use.
+
+Let me know if you want:
+- A Bengali version 🇧🇩
+- GitHub-style badges
+- Or screenshot section with placeholders
+
+I can add that too.
+
 ---
 
 ## 🚀 Running Locally
 
 > Make sure you have a Vite-compatible environment (Node.js 18+, npm)
 
-1. Clone the repo:
+Run the app locally following these steps:
+
 ```bash
+1. Clone the repository:
 git clone https://github.com/NajibHos/planzo.git
 cd planzo
 
@@ -45,7 +63,7 @@ VITE_APPWRITE_CLIENTSSTATUS_COLLECTION_ID=status_collection_id
 VITE_APPWRITE_PROJECTSSTATUS_COLLECTION_ID=status_collection_id
 VITE_APPWRITE_CLIENTSOURCE_COLLECTION_ID=source_collection_id
 
-4. run the app
+4. run the app:
 npm run dev
 
 ## 🧪 Demo Data
@@ -59,21 +77,3 @@ The project includes 9 demo:
 - Transactions
 
 You can use the JSON file planzo_demo_data.json to seed your Appwrite database.
-
-## 💡 Future Plans
-
-This is a personal-use app, but I may improve or open-source it further.
-Feel free to suggest features or ideas in the issues tab or message me directly!
-
-## 📄 License
-
-This project is for personal use. Not licensed for redistribution or commercial use.
-
----
-
-Let me know if you want:
-- A Bengali version 🇧🇩
-- GitHub-style badges
-- Or screenshot section with placeholders
-
-I can add that too.
